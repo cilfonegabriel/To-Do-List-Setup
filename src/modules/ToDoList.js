@@ -37,6 +37,6 @@ export default class ToDoList {
   }
 
   sortTasks() {
-    this.taskList.forEach ((task, index) => task.index = index);
+    this.tasklist.forEach((task, index) => { task.index = index; });
   }
 }
