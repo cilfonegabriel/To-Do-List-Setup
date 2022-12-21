@@ -37,14 +37,6 @@ export default class ToDoList {
   }
 
   sortTasks() {
-    for (let i = 0; i < this.taskList.length - 1; i += 1) {
-      for (let j = 0; j < (this.taskList.length - 1) - i; j += 1) {
-        if (this.taskList[j].index > this.taskList[j + 1].index) {
-          const temp = this.taskList[j + 1];
-          this.taskList[j + 1] = this.taskList[j];
-          this.taskList[j] = temp;
-        }
-      }
-    }
+    this.taskList.forEach ((task, index) => task.index = index);
   }
 }
